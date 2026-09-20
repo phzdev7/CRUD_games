@@ -48,10 +48,12 @@ public class Interface {
 				 String plataforma = sc.nextLine();
 				 System.out.print("Preço: R$");
 				 double preco = sc.nextDouble();
+				 System.out.print("Estoque: ");
+				 int estoque = sc.nextInt();
 				 sc.nextLine();
 				 System.out.println("\n----------------------------------------------------------");
 				 
-				 jogos.add(new User (nome,plataforma, preco));
+				 jogos.add(new User (nome,plataforma, preco, estoque));
 			 }
 			continue;  //DENTRO DO IF
 		 }
@@ -65,6 +67,7 @@ public class Interface {
 				 System.out.println("Jogo: " + user.getNome());
 				 System.out.println("Plataforma: " + user.getPlataforma());
 				 System.out.println("Preço: R$" + user.getPreco());
+				 System.out.println("Estoque: " + user.getEstoque());
 				 System.out.println("\n----------------------------------------------------------");
 
 			 }
@@ -88,17 +91,109 @@ public class Interface {
 				 System.out.println("Jogo: " + jogoEscolhido.getNome());
 				 System.out.println("Plataforma: " + jogoEscolhido.getPlataforma());
 				 System.out.println("Preço: R$" + jogoEscolhido.getPreco());
+				 System.out.println("Estoque: " + jogoEscolhido.getEstoque());
 				 System.out.println("\n================================================");
 
+				 continue;
 			 }
 		 
-		 
-		 
-		 
-		 
-		 
-		 
+		   if (r == 4) {
+			 int  n = 1;
+			 for (User user : jogos) {
+				 System.out.println(n + "- " + user.getNome());
+				 n++;
+			 }
+			 System.out.print("Digite o numero do jogo que deseja comprar: ");
+			 int e = sc.nextInt();
 			
+			 
+			 System.out.println("                 Jogo Comprado com Sucesso! ");
+			 User jogoEscolhido = jogos.get(e - 1); 
+			 jogos.remove(e - 1);
+			 System.out.println("============" + jogoEscolhido.getNome() + ", " +
+			 jogoEscolhido.getPlataforma() + ", R$" +  jogoEscolhido.getPreco() +
+			 jogoEscolhido.getEstoque() + "============");
+			 
+			 int j  = 1;
+			 System.out.println("\n             Lista atualizada");
+			 for (User user : jogos) {
+				 
+				 System.out.println(j + "- " + user.getNome());
+				 j++;
+			 }
+			 System.out.println("=======================================================");
+			  continue;
+			}
+		   if (r == 5) {
+			   
+			   int  n = 1;
+			   for (User user : jogos) {
+					 System.out.println(n + "- " + user.getNome());
+					 n++;
+				 }
+			   System.out.print("Qual jogo deseja alterar o estoque: ");
+			   int escolha = sc.nextInt();
+			   
+			   sc.nextLine();
+			   User jogosEscolhido = jogos.get(escolha - 1);
+			   
+			   System.out.print("Digite o novo estoque: ");
+			   int novoEstoque = sc.nextInt();
+			   jogosEscolhido.setEstoque(novoEstoque);
+			   
+			   System.out.println("=======================================================");
+			
+			   System.out.println("\nEstoque atualizado!");
+			   System.out.println(jogosEscolhido.getNome() + ", " +
+			   jogosEscolhido.getPlataforma() + ", R$" +  jogosEscolhido.getPreco() +
+			   ", Estoque: " +
+			   jogosEscolhido.getEstoque());
+			   
+			   System.out.println("=======================================================");
+
+			   	System.out.println("         Lista atualizada");
+			    for (User user : jogos) {
+					 System.out.println(n - 3 + "- " + user.getNome() + ", Plataforma: " + user.getPlataforma()
+					 + ", R$" + user.getPreco() + ", Estoque: " + user.getEstoque());
+					 n++;
+				 }
+			   
+			   System.out.println("=======================================================");
+			
+			   continue;
+			   
+		   }
+		   if (r == 6) {  
+			   
+			   
+			   int  n = 1;
+				 for (User user : jogos) {
+					 System.out.println(n + "- " + user.getNome());
+					 n++;
+				 }
+				 System.out.print("Digite o numero do jogo que deseja Remover: ");
+				 int e = sc.nextInt();
+				
+				 
+				 System.out.println("                 Jogo removido ");
+				 User jogoEscolhido = jogos.get(e - 1); 
+				 jogos.remove(e - 1);
+				 System.out.println("============" + jogoEscolhido.getNome() + ", " +
+				 jogoEscolhido.getPlataforma() + ", R$" +  jogoEscolhido.getPreco() +
+				 jogoEscolhido.getEstoque() + "============");
+				 
+				 int j  = 1;
+				 System.out.println("\n             Lista atualizada");
+				 for (User user : jogos) {
+					 
+					 System.out.println(j + "- " + user.getNome());
+					 j++;
+				 }
+				 System.out.println("=======================================================");
+				  continue;
+				}
+		 
+	
 		}
 		
 	}

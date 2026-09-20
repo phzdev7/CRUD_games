@@ -4,15 +4,18 @@ public class User {
 	private String nome;
 	private String plataforma;
 	private double preco;
+	private int estoque;
 	
 	
 
 
-	public User(String nome, String plataforma, double preco) {
+	public User(String nome, String plataforma, double preco, int estoque) {
 
 	  this.nome = nome;
 	  this.plataforma = plataforma;
 	  this.preco = preco;
+	  this.estoque = estoque;
+	  
 	}
 
 public String getNome() {
@@ -29,6 +32,14 @@ public String getPlataforma() {
 	return plataforma;
 }
 
+
+public int getEstoque() {
+	return estoque;
+}
+
+public void setEstoque(int estoque) {
+	this.estoque = estoque;
+}
 
 public void setPlataforma(String plataforma) {
 	this.plataforma = plataforma;

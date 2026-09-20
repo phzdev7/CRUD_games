@@ -39,4 +39,4 @@ Atualmente, o projeto utiliza `ArrayList` para armazenar os dados em memória.
 
 Utilizar este projeto como laboratório de aprendizado, colocando em prática conceitos de **Java, POO, CRUD, banco de dados, APIs e boas práticas de desenvolvimento**.
 
-A
+

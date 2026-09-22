@@ -20,23 +20,8 @@ O objetivo principal é praticar conceitos fundamentais de programação e desen
 * Remoção de jogos
 * Gerenciamento de estoque
 
-## 🚧 Em desenvolvimento
-
-Atualmente, o projeto utiliza `ArrayList` para armazenar os dados em memória.
-
-### Próximos objetivos
-
-* [ ] Implementar MySQL
-* [ ] Aprender e aplicar JDBC
-* [ ] Implementar persistência de dados
-* [ ] Utilizar JPA e Hibernate
-* [ ] Transformar o projeto em uma API REST com Spring Boot
-* [ ] Adicionar validações e tratamento de erros
-* [ ] Criar testes automatizados
-* [ ] Melhorar a arquitetura e organização do projeto
-
 ## 📚 Objetivo do projeto
 
-Utilizar este projeto como laboratório de aprendizado, colocando em prática conceitos de **Java, POO, CRUD, banco de dados, APIs e boas práticas de desenvolvimento**.
+Utilizar este projeto como laboratório de aprendizado, colocando em prática conceitos de **Java, POO, CRUD e boas práticas de desenvolvimento**.
 
 
